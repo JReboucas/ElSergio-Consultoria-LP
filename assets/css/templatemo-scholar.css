@@ -1689,6 +1689,31 @@ Contact Style
   width: 100%; /* Para garantir que ocupe toda a largura do seu container */
 }
 
+/* Botão Flutuante do WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  background-color: #128C7E; /* Tom mais escuro do WhatsApp */
+  transform: scale(1.1); /* Leve efeito de zoom */
+}
+
+.whatsapp-icon {
+  margin-top: 16px;
+}
 
 
 
