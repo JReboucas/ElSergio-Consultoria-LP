@@ -120,12 +120,12 @@ body {
 }
 
 ::selection {
-  background: #7a6ad8;
+  background: navy;
   color: #fff;
 }
 
 ::-moz-selection {
-  background: #7a6ad8;
+  background: navy;
   color: #fff;
 }
 
@@ -147,12 +147,12 @@ body {
 }
 
 .section-heading h2 em {
-  color: #7a6ad8;
+  color: navy;
   font-style: normal;
 }
 
 .section-heading h6 {
-  color: #7a6ad8;
+  color: navy;
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 600;
@@ -161,7 +161,7 @@ body {
 .main-button a {
   display: inline-block;
   background-color: #fff;
-  color: #7a6ad8;
+  color: navy;
   font-size: 14px;
   font-weight: 500;
   height: 40px;
@@ -172,7 +172,7 @@ body {
 }
 
 .main-button a:hover {
-  background-color: #7a6ad8;
+  background-color: navy;
   color: #fff;
 }
 
@@ -249,7 +249,7 @@ Pre-loader Style
   height: 16px;
   top: 12px;
   left: 15px;
-  background: #7a6ad8;
+  background: navy;
   border-radius: 50%;
   -webkit-transform: translateX(0);
   transform: translateX(0);
@@ -272,7 +272,7 @@ Pre-loader Style
   width: 16px;
   height: 16px;
   margin-left: 16px;
-  background: #7a6ad8;
+  background: navy;
   border-radius: 50%;
 }
 
@@ -285,7 +285,7 @@ Header Style
 */
 
 .background-header {
-  background-color: #7a6ad8 !important;
+  background-color: navy !important;
   border-radius: 0px 0px 25px 25px;
   height: 80px!important;
   position: fixed!important;
@@ -606,7 +606,7 @@ Header Style
   }
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
-    color: #7a6ad8!important;
+    color: navy!important;
     opacity: 1;
   }
   .header-area.header-sticky .nav li.search-icon a {
@@ -667,130 +667,138 @@ Banner Style
 */
 
 .main-banner {
-  background-image: url(../images/banner-bg.jpg);
-  background-position: right bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 170px 0px 120px 0px;
-}
-
-.main-banner .item-1 {
-  background-image: url(../images/banner-item-01.jpg);
-}
-
-.main-banner .item-2 {
-  background-image: url(../images/banner-item-02.jpg);
-}
-
-.main-banner .item-3 {
   background-image: url(../images/banner-item-03.jpg);
-}
-
-.main-banner .item {
-  background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   background-size: cover;
-  border-radius: 25px;
-  padding: 100px 100px;
-  margin-left: 130px;
+  padding: 150px;
+  color: #fff;
 }
 
-.main-banner .item span.category {
-  background-color: #7a6ad8;
+.main-banner .container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  max-width: 1200px; /* Largura máxima no desktop */
+  margin: 0 auto;
+  flex-direction: column; /* Ajusta o layout para coluna em telas menores */
+}
+
+.main-banner .header-text {
+  max-width: 800px; /* Largura do texto no desktop */
+  width: 100%;
+  text-align: center; /* Centraliza o texto em telas pequenas */
+}
+
+.main-banner h2 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  max-width: 100%;
+  white-space: normal;
+  color: white;
+}
+
+.main-banner p {
+  font-size: 18px;
+  color: #ddd;
+  margin-bottom: 30px;
+  max-width: 100%;
+  white-space: normal;
+}
+
+.main-banner .category {
+  background-color: navy;
   color: #fff;
   font-size: 14px;
   text-transform: uppercase;
   padding: 5px 15px;
   border-radius: 20px;
   display: inline-block;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
-.main-banner .item h2 {
-  font-size: 48px;
-  font-weight: 700;
-  color: #fff;
-  line-height: 70px;
-  width: 60%;
-  margin-bottom: 40px;
-}
-
-.main-banner .item p {
-  color: #fff;
-  width: 65%;
-}
-
-.main-banner .item .buttons {
-  display: flex;
-  margin-top: 50px;
-}
-
-.main-banner .item .buttons .main-button {
-  margin-right: 30px;
-}
-
-.main-banner .item .buttons .main-button a {
+.main-banner .main-button a {
   font-size: 14px;
-  color: #7a6ad8;
+  color: navy;
   background-color: #fff;
-  display: inline-block;
-  height: 50px;
-  line-height: 50px;
-  padding: 0px 25px;
+  padding: 10px 25px;
   border-radius: 25px;
   font-weight: 500;
+  text-decoration: none;
+  display: inline-block; /* Garante que o botão tenha o comportamento correto */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  line-height: 1.5; /* Ajusta a altura da linha para centralizar verticalmente */
 }
 
-.main-banner .item .buttons .icon-button i {
-  color: #7a6ad8;
-  background-color: #fff;
-  display: inline-block;
-  height: 50px;
-  width: 50px;
-  text-align: center;
-  line-height: 50px;
-  border-radius: 50%;
-  margin-right: 10px;
-  font-size: 16px;
+
+/* --- Mobile --- */
+@media (max-width: 767px) {
+  .main-banner {
+    padding: 50px 20px; /* Reduz o padding em telas pequenas */
+  }
+
+  .main-banner h2 {
+    font-size: 32px; /* Diminui o tamanho da fonte no mobile */
+    line-height: 1.2;
+  }
+
+  .main-banner p {
+    font-size: 16px;
+  }
+
+  .main-banner .header-text {
+    max-width: 100%; /* Largura total no mobile */
+  }
+
+  .main-banner .container {
+    flex-direction: column; /* Coloca o conteúdo em coluna no mobile */
+    text-align: center; /* Centraliza o conteúdo */
+  }
 }
 
-.main-banner .item .buttons .icon-button a {
-  color: #fff;
-  font-size: 14px;
-  font-weight: 500;
+/* --- Tablet --- */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main-banner {
+    padding: 100px 40px; /* Padding intermediário para tablet */
+  }
+
+  .main-banner h2 {
+    font-size: 40px; /* Tamanho de fonte intermediário para tablet */
+    line-height: 1.3;
+  }
+
+  .main-banner p {
+    font-size: 17px;
+  }
+
+  .main-banner .header-text {
+    max-width: 90%; /* Aumenta a largura do texto no tablet */
+  }
+
+  .main-banner .container {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
-.main-banner .owl-nav {
-  position: absolute;
-  max-width: 1320px;
-  bottom: 23px;
-  left: 0;
-  text-align: right;
-}
+/* --- Desktop --- */
+@media (min-width: 1024px) {
+  .main-banner {
+    padding: 150px; /* Mantém o padding grande no desktop */
+  }
 
-.main-banner .owl-nav .owl-prev i,
-.main-banner .owl-nav .owl-next i {
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  font-size: 24px;
-  display: inline-block;
-  color: #fff;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  opacity: 1;
-  transition: all .3s;
-}
+  .main-banner h2 {
+    font-size: 48px; /* Tamanho maior no desktop */
+  }
 
-.main-banner .owl-nav .owl-prev i {
-  position: absolute;
-  bottom: 65px;
-}
+  .main-banner p {
+    font-size: 18px;
+  }
 
-.main-banner .owl-nav .owl-prev i:hover,
-.main-banner .owl-nav .owl-next i:hover {
-  opacity: 1;
-  background-color: rgba(255, 255, 255, 0.5);
+  .main-banner .header-text {
+    max-width: 800px; /* Largura maior no desktop */
+  }
 }
 
 
@@ -815,7 +823,7 @@ Services Style
   display: inline-block;
   text-align: center;
   line-height: 190px;
-  background-color: #7a6ad8;
+  background-color: navy;
   border-radius: 50%;
   position: absolute;
   right: 0;
@@ -878,7 +886,7 @@ About Style
 .accordion {
   margin-top: -40px;
   margin-bottom: -40px;
-  background-color: #7a6ad8;
+  background-color: navy;
   border-radius: 40px;
   padding: 80px 50px 50px 50px;
 }
@@ -897,7 +905,7 @@ About Style
 }
 
 .accordion-button:not(.collapsed) {
-  color: #7a6ad8;
+  color: navy;
   background-color: #fff;
 }
 
@@ -919,7 +927,7 @@ h2.accordion-header button {
   text-align: center;
   line-height: 30px;
   border-radius: 50%;
-  background-color: #7a6ad8;
+  background-color: navy;
   color: #fff;
 }
 
@@ -1004,7 +1012,7 @@ Courses Style
   top: 30px;
   font-size: 14px;
   text-transform: uppercase;
-  color: #7a6ad8;
+  color: navy;
   background-color: rgba(250, 250, 250, 0.95);
   padding: 8px 20px;
   border-radius: 25px;
@@ -1016,7 +1024,7 @@ Courses Style
   position: absolute;
   right: -30px;
   top: -50px;
-  background-color: rgba(122, 106, 216, 0.95);
+  background-color: navy;
   width: 130px;
   height: 130px;
   border-radius: 50%;
@@ -1054,7 +1062,7 @@ Courses Style
 }
 
 .events_item .down-content span.author {
-  color: #7a6ad8;
+  color: navy;
   font-size: 15px;
   display: inline-block;
   margin-bottom: 6px;
@@ -1067,7 +1075,7 @@ Courses Style
 }
 
 .events_item:hover .down-content h4 {
-  color: #7a6ad8;
+  color: navy;
 }
 
 .events_item:hover .thumb span.price {
@@ -1095,7 +1103,7 @@ Facts Style
   z-index: -1;
   width: 95%;
   height: 100%;
-  background-color: #7a6ad8;
+  background-color: navy;
   content: '';
   border-top-right-radius: 500px;
   border-bottom-right-radius: 500px;
@@ -1174,7 +1182,7 @@ Team Style
 }
 
 .team-member .main-content span.category {
-  color: #7a6ad8;
+  color: navy;
   font-size: 15px;
 }
 
@@ -1192,7 +1200,7 @@ Team Style
 
 .team-member .main-content ul li a {
   background-color: #fff;
-  color: #7a6ad8;
+  color: navy;
   display: inline-block;
   text-align: center;
   line-height: 40px;
@@ -1204,7 +1212,7 @@ Team Style
 }
 
 .team-member .main-content ul li a:hover {
-  background-color: #7a6ad8;
+  background-color: navy;
   color: #fff;
 }
 
@@ -1246,7 +1254,7 @@ Testimonials Style
 }
 
 .testimonials .item {
-  background-color: #7a6ad8;
+  background-color: navy;
   border-radius: 25px;
   padding: 80px;
 }
@@ -1296,7 +1304,7 @@ Testimonials Style
   line-height: 50px;
   font-size: 24px;
   display: inline-block;
-  color: #7a6ad8;
+  color: navy;
   background-color: #fff;
   border-radius: 50%;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.10);
@@ -1363,7 +1371,7 @@ Events Style
 .events .item ul li span.category {
   font-size: 14px;
   text-transform: uppercase;
-  color: #7a6ad8;
+  color: navy;
   background-color: #fff;
   padding: 8px 20px;
   border-radius: 25px;
@@ -1386,7 +1394,7 @@ Events Style
 
 .events .item ul li h6 {
   font-size: 16px;
-  color: #7a6ad8;
+  color: navy;
   font-weight: 600;
 }
 
@@ -1394,7 +1402,7 @@ Events Style
   position: absolute;
   right: 0;
   top: 22px;
-  background-color: #7a6ad8;
+  background-color: navy;
   width: 60px;
   height: 120px;
   display: inline-block;
@@ -1456,7 +1464,7 @@ Contact Style
   position: absolute;
   left: 0;
   top: 0;
-  background-color: #7a6ad8;
+  background-color: navy;
   width: 80px;
   padding: 30px 8px;
   line-height: 25px;
@@ -1486,7 +1494,7 @@ Contact Style
 
 .contact-us .special-offer h6 em {
   font-style: normal;
-  color: #7a6ad8;
+  color: navy;
   font-weight: 600;
 }
 
@@ -1497,7 +1505,7 @@ Contact Style
 
 .contact-us .special-offer h4 em {
   font-style: normal;
-  color: #7a6ad8;
+  color: navy;
 }
 
 .contact-us .special-offer a {
@@ -1509,7 +1517,7 @@ Contact Style
   display: inline-block;
   text-align: center;
   line-height: 50px;
-  background-color: #7a6ad8;
+  background-color: navy;
   color: #fff;
   border-radius: 50%;
 }
@@ -1517,7 +1525,7 @@ Contact Style
 .contact-us .contact-us-content {
   border-radius: 25px;
   padding: 80px;
-  background-color: #7a6ad8;
+  background-color: navy;
   position: relative;
   z-index: 1;
 }
@@ -1594,7 +1602,7 @@ Contact Style
   background-color: #fff;
   padding: 0px 25px;
   border-radius: 25px;
-  color: #7a6ad8;
+  color: navy;
   transition: all .4s;
   position: relative;
   z-index: 3;
@@ -1606,8 +1614,8 @@ Contact Style
 
 .contact-us-content .more-info {
   text-align: center;
-  background: rgb(85,0,227);
-  background: linear-gradient(90deg, rgba(85,0,227,1) 0%, rgba(198,61,255,1) 100%);
+  background: navy;
+  background: navy;
   border-radius: 0px 0px 23px 23px;
   padding: 45px 30px 15px 30px;
 }
@@ -1629,6 +1637,61 @@ Contact Style
   font-weight: 400;
 }
 
+/* Mini Card de Agendamento */
+.schedule-card {
+  background-color: rgba(249, 235, 255, 0.15); /* Mesma cor dos inputs do formulário */
+  padding: 15px;
+  border-radius: 25px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.schedule-card h4 {
+  font-size: 16px;
+  color: #fff; /* Mesma cor de texto dos placeholders */
+  margin-bottom: 15px;
+}
+
+.schedule-card .input-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Espaço entre os inputs */
+}
+
+.schedule-card label {
+  display: block;
+  font-size: 14px;
+  color: #fff; /* Mesma cor dos textos no formulário */
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.schedule-card input {
+  width: 100%;
+  height: 40px;
+  border-radius: 25px;
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 15px;
+  background-color: rgba(249, 235, 255, 0.15); /* Mesma cor dos inputs */
+}
+
+.schedule-card input::placeholder {
+  color: #fff;
+}
+
+.schedule-card input[type="date"],
+.schedule-card input[type="time"] {
+  background-color: rgba(249, 235, 255, 0.15); /* Deixando mais consistente */
+  color: #fff; /* Texto em branco */
+  width: 100%; /* Para garantir que ocupe toda a largura do seu container */
+}
+
+
+
+
 /* 
 ---------------------------------------------
 Footer Style
@@ -1638,7 +1701,7 @@ Footer Style
 footer {
   margin-top: 150px;
   position: relative;
-  background-color: #7a6ad8;
+  background-color: navy;
   vertical-align: middle;
   min-height: 150px;
   border-radius: 150px 150px 0px 0px;
@@ -1787,7 +1850,7 @@ body {
     margin-top: 30px;
   }
   .about-us .main-button a {
-    background-color: #7a6ad8;
+    background-color: navy;
     color: #fff;
   }
   .courses {
